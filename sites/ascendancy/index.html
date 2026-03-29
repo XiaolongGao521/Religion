@@ -24,7 +24,7 @@
       }
 
       .window + .window {
-        margin-top: 20px;
+        margin-top: 28px;
       }
 
       .window,
@@ -36,6 +36,18 @@
 
       .window {
         border: 2px solid #000000;
+      }
+
+      .window-body {
+        padding: 24px;
+        overflow-x: hidden;
+      }
+
+      .window-body,
+      .panel,
+      .quote-box,
+      fieldset {
+        min-width: 0;
       }
 
       .title-bar {
@@ -81,22 +93,28 @@
       .section-grid {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 16px;
+        gap: 24px;
+        align-items: start;
       }
 
       .fact-grid {
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 16px;
-        margin-top: 16px;
+        gap: 24px;
+        margin-top: 24px;
+        align-items: start;
       }
 
-      .panel {
+      .panel,
+      .quote-box {
         height: 100%;
+        padding: 20px 18px 18px;
+        overflow-wrap: anywhere;
+        word-break: break-word;
       }
 
       .quote-box {
-        margin-top: 16px;
+        margin-top: 24px;
       }
 
       .quote-box blockquote {
@@ -116,7 +134,7 @@
 
       .footer-note {
         text-align: center;
-        margin-top: 18px;
+        margin-top: 22px;
         font-size: 0.95rem;
       }
 
@@ -125,9 +143,14 @@
           padding: 16px;
         }
 
+        .window-body {
+          padding: 18px;
+        }
+
         .section-grid,
         .fact-grid {
           grid-template-columns: 1fr;
+          gap: 18px;
         }
       }
     </style>
