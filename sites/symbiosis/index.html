@@ -10,6 +10,12 @@
         scroll-behavior: smooth;
       }
 
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
       body {
         margin: 0;
         min-height: 100vh;
@@ -36,11 +42,15 @@
 
       .window {
         border: 2px solid #ffffff;
+        width: 100%;
+        overflow: visible !important;
+        height: auto !important;
       }
 
       .window-body {
         padding: 24px;
-        overflow-x: hidden;
+        overflow: visible !important;
+        height: auto !important;
       }
 
       .window-body,
@@ -48,6 +58,7 @@
       .quote-box,
       fieldset {
         min-width: 0;
+        max-width: 100%;
       }
 
       .title-bar {
@@ -105,9 +116,14 @@
         align-items: start;
       }
 
+      .section-grid > *,
+      .fact-grid > * {
+        width: 100%;
+      }
+
       .panel,
       .quote-box {
-        height: 100%;
+        height: auto;
         padding: 20px 18px 18px;
         overflow-wrap: anywhere;
         word-break: break-word;
